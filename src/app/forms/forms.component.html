@@ -1,0 +1,88 @@
+
+<form [formGroup]="formulariocontacto"(ngSubmit)="onsubmit()" class="row g-3 needs-validation m-2" novalidate>
+    <div class="col-md-4 m-2">
+      <label for="validationCustom01" class="form-label">Nombre</label>
+      <input formControlName="name" type="text" class="form-control" id="validationCustom01" value=" " 
+      [ngClass]="nombrecontrol?.valid ? 'is-valid' : ''"
+      required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 m-2">
+        <label for="validationCustom02" class="form-label">Apellido</label>
+        <input formControlName="lastname" type="text" class="form-control" id="validationCustom02" value=" "
+        [ngClass]="apellidocontrol?.valid ? 'is-valid' : ''"
+        required>
+        <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 m-2">
+      <label for="validationCustomUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend"></span>
+        <input formControlName="username" type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+        [ngClass]="usernamecontrol?.valid ? 'is-valid' : ''"
+         required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 m-2">
+      <label for="validationCustom03" class="form-label">Provincia</label>
+      <input formControlName="provincia" type="text" class="form-control" id="validationCustom03" 
+      [ngClass]="provinciacontrol?.valid ? 'is-valid' : ''"
+      required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 m-2">
+      <label for="validationCustom04" class="form-label">Ciudad</label>
+      <input formControlName="ciudad" type="text"class="form-control"id="validationCustom03"
+      [ngClass]="ciudadcontrol?.valid ? 'is-valid' : ''"
+      required>
+       
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 m-2">
+      <label for="validationCustom05" class="form-label">Codigo postal</label>
+      <input formControlName="codigopostal" type="text" class="form-control" id="validationCustom05" 
+      [ngClass]="codigopostalcontrol?.valid ? 'is-valid' : ''"
+      required>
+      <div class="invalid-feedback">
+        
+      </div>
+    </div>
+   
+    <div class="mb-3 m-2">
+        <label for="exampleInputEmail1" class="form-label">Email </label>
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+        [ngClass]="emailcontrol?.valid ? 'is-valid' : ''" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3 m-2">
+        <label for="exampleInputPassword1" class="form-label">contraseña</label>
+        <input formControlName="contraseña" type="password" class="form-control" id="exampleInputPassword1 " 
+        [ngClass]="contrasenacontrol?.valid ? 'is-valid' :  ''" required>
+      </div>
+      <div class="col-12 m-2">
+        <div class="form-check">
+          <input  class="form-check-input m-2" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label m-2" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+    <div class="col-12 m-2">
+      <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+    </div>
+    
+  </form>
